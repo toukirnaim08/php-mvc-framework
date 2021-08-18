@@ -9,23 +9,11 @@ class Home extends Controller
     }
     public function first()
     {
-        $values = [
-            'id'=>3,
-            'name'=> 'customer3',
-            'email'=>'customer3@gmail.com',
-            'pass'=> '1234'
-        ];
-
-        
-        //$this->customerModel->addCustomer($values);
-        //$customers = $this->customerModel->getCustomers();
-        $customers = $this->customerModel->addCustomer($values);
-        
         $data = [
-            'title'=>'Home First',
-            'customer'=> $customers
+            'title'=>'Home About',
+            'name'=>'Home About'
         ];
-        $this->view('home/first',$data);
+        $this->view('home/about',$data);
     }
 
     public function about()
